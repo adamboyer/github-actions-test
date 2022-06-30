@@ -1,0 +1,13 @@
+name: Ali
+age: 123
+address: "asdf: asdf"
+active: true
+key: 
+  key1: value,
+  key2: 33,
+  key3: {
+    array: 
+      - item1
+      - item2
+      - key: value
+          - key2: nextest
