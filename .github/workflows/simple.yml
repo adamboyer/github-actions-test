@@ -6,8 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
-        run: ecCcho "Hello World"
+        run: echo "Hello World"
       - name: multilone script
         run: |
           node -v
           npm -v
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
