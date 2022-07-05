@@ -5,10 +5,24 @@ on:
   #schedule: 
   #- cron: "0/5 * * * *"
   #- cron: "0/6 * * * *"
-  repository_dispatch: 
-    types: [build]
-  pull_request:
-    types: [closed, assigned, opened, reopened]
+  #repository_dispatch: 
+  #types: [build]
+  #pull_request:
+  #types: [closed, assigned, opened, reopened]
+  push:
+    branches:
+      - main
+      - 'feature/*' # matches anthing that start with feature/ doesn't match feature/asdf/something
+      - 'feature/**' # matches anthing that starts with feature/ including feature/asdf/something
+      - '!feature/featC' # will ignore this branch even if something else matches it
+    tags: # can not use tags and tags-ignore at the same time
+      - 'v1.*'
+    paths: # can also have paths-ignore but not at the same time( just like the other ones)
+      - '**.js'
+      - '!filename.js'
+  pull_request: 
+    branches-ignore: # can not have branches and branches-ignore
+      - develop
 
 jobs: 
   run-github-actions:
