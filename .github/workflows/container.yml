@@ -20,8 +20,8 @@ jobs:
           entrypoint: '/usr/local/bin/node'
           args: '-v' 
       - uses: actions/checkout@v1
-      - name: chmode something
-        run: chmode +x ./script.sh
+      - name: chmod something
+        run: chmod +x ./script.sh
       - name: Run a script 
         uses: docker://node:12.14.1-alpine3.10
         with: 

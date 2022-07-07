@@ -9,7 +9,7 @@ on:
   #types: [build]
   #pull_request:
   #types: [closed, assigned, opened, reopened]
-  pull_request:
+  push:
     branches:
       - main
       - 'feature/*' # matches anthing that start with feature/ doesn't match feature/asdf/something
