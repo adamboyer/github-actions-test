@@ -18,7 +18,7 @@ jobs:
             node_version: 8
     runs-on: ${{ matrix.os }} 
     env:
-      IS_UBY_8: ${{ matix.is_running_8 }}
+      IS_UBY_8: ${{ matrix.is_running_8 }}
     steps:
       - name: Log node version
         run: node -v
